@@ -1,0 +1,12 @@
+ifconfig
+mkdir games
+cd games
+ls
+hadoop fs -mkdir /dhinesh
+hadoop fs -copyFromLocal /home/edureka/Desktop/games /dhinesh  
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordcount /dhinesh/games /dhinesh/count
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmean /dhinesh/games /dhinesh/mean
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmedian /dhinesh/games /dhinesh/median
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordstandarddeviation /dhinesh/games /dhinesh/sd
+history
